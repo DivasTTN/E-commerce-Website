@@ -18,7 +18,7 @@ const Footer = () => {
     //   </footer>
     // </div>
 <>
-<div className="foot-style">
+<div className="foot-style bg-success">
     <footer>
 
   <ul class="footer justify-content-center">

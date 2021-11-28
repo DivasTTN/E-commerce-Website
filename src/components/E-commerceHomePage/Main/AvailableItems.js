@@ -44,6 +44,7 @@ const AvailableItems = (props) => {
 
       
     })
+    console.log(props.onSearch);
     return(
         <section>
             <ul className="items container-fluid d-flex flex-wrap">

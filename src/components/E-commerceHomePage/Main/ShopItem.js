@@ -96,7 +96,7 @@ const ShopItem = (props) => {
             <div clas="product-details card-body c">
                  <NavLink className="title-style card-title" to={`/product/${props.id}`}>{props.title}</NavLink>
                  {/* <p className="c card-text">{price}</p> */}
-                 <h5 class="price">{price}$</h5>
+                 <h5 class="price">{price}</h5>
                  <p class="discripction">{props.descr}</p>
 
                  {/* <div>{props.category}</div> */}

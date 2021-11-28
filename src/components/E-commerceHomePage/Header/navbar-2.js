@@ -81,7 +81,7 @@ const NavbarPart = () => {
           </li>
           
           <li className=" nav-item">
-            <NavLink className="nav-link" style={{"color":"#fff"}} to="/products">
+            <NavLink className="nav-link" style={{"color":"#fff"}} to="/">
               Shop&nbsp;&nbsp; <span className="remove">|</span>
             </NavLink>
           </li>
