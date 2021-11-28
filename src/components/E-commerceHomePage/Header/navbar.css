@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding:0;
+    
+}
+.nav-btn{
+ border-radius: 0;
+ margin: 0;
+ /* padding: 0 15px; */
+ margin-top: 9px;
+ margin-left: 30px;
+}
+.main-nav{
+    margin-right: 300px;
+    margin-left: 700px;
+}
+.main-li{
+    padding: 20px;
+}
+.space{
+    margin-left: 30px;
+    margin-right: 30px;;
+}
+.space{
+    padding-bottom: 50px;
+}
+.jumb{
+    margin-top:100px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    background-color: #EADEDE;
+}
+.header-inside{
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+}
+.has-search .form-control {
+    padding-left: 2.375rem;
+    overflow: hidden;
+    
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    /* display: block; */
+    /* width: 2.375rem; */
+    width: 40px;
+    height: 2.375rem;
+    /* line-height: 2.375rem; */
+    line-height: 50px;
+    text-align: center;
+    pointer-events: none;
+}
+.search{
+    width:100px;
+    display: inline-block;
+    margin-right: 13px;
+}
+.form-control{
+    width : 600px !important;
+}
+/* .shape {
+    -webkit-animation: spin 8s infinite linear;
+} */
+.text-style{
+    font-family: 'Architects Daughter', cursive;
+    color:#e1e36f;
+}
+
+.shape {
+    width: 100%;
+   
+    font-weight: bold;
+    position: relative;
+    animation: mymove 5s infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes mymove {
+    from {left: -10%;}
+    to {left: 30%;}
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:0px; top:30px;}
+    /* 50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;} */
+  }
+ 
+@media (max-width:630px) {
+    .search{
+        width:350px !important;
+    }
+}
