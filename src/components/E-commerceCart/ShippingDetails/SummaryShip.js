@@ -1,11 +1,11 @@
 
-import "../Shoppingcart/ProductSummary.css";
-const SummaryShip= () => {
-  return (
-    <>
+// import "../Shoppingcart/ProductSummary.css";
+// const SummaryShip= () => {
+//   return (
+//     <>
       
-    </>
-  );
-};
+//     </>
+//   );
+// };
 
-export default SummaryShip;
+// export default SummaryShip;

@@ -34,16 +34,16 @@ const MainShipping = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
 
   const formIsValid =
-  firstname &&
-  LastName &&
-  address &&
-  country &&
-  city &&
-  zip &&
-  phoneNumber;
+    firstname &&
+    LastName &&
+    address &&
+    country &&
+    city &&
+    zip &&
+    phoneNumber;
 
-  function SubmitButton(){
-    if (formIsValid){
+  function SubmitButton() {
+    if (formIsValid) {
       return <NavLink to='payment'><button className="btn-a btn btn-secondary" type="button">Next</button></NavLink>
     } else {
       return <button className="btn-a btn btn-secondary" type="button" disabled>Next</button>
@@ -79,7 +79,7 @@ const MainShipping = () => {
   //   const enteredZipisValid = !isEmpty(enteredZip);
   //   const enteredPhoneNumberisValid = !isEmpty(enteredPhoneNumber);
 
-    
+
 
   //   setFormInputsValidity({
   //     FName: enteredFirstNameisValid,
@@ -97,8 +97,8 @@ const MainShipping = () => {
   //   setDisabled(false);
   // };
 
-  const [isTouched,setisTouched] =useState(false)
-  const [ phoneTouched , setphoneTouched] =useState(false); 
+  const [isTouched, setisTouched] = useState(false)
+  const [phoneTouched, setphoneTouched] = useState(false);
   return (
     <div className="topMost-ship">
       <div className="main ms-5">
@@ -110,11 +110,11 @@ const MainShipping = () => {
               First Name
             </label>
             <input
-              onChange={(e)=>{setFirstname(e.target.value)}}              type="text"
+              onChange={(e) => { setFirstname(e.target.value) }} type="text"
               className="gap form"
               id="inputEmail4"
             />
-          
+
             {/* {!emailValid && <p>Please check Email</p>} */}
           </div>
           <div
@@ -124,7 +124,7 @@ const MainShipping = () => {
               Last Name
             </label>
             <input
-            onChange={ e => setLastname(e.target.value)}
+              onChange={e => setLastname(e.target.value)}
               type="text"
               className="gap form"
               id="inputPassword4"
@@ -139,7 +139,7 @@ const MainShipping = () => {
                 Address
               </label>
               <input
-              onChange={ e => setAddress(e.target.value)}
+                onChange={e => setAddress(e.target.value)}
                 type="text"
                 className="form full"
                 id="inputAddress"
@@ -168,7 +168,7 @@ const MainShipping = () => {
               Country
             </label>
             <select
-            onChange={ e => setCountry(e.target.value)}
+              onChange={e => setCountry(e.target.value)}
               style={{ "font-size": "12px" }}
               id="inputState"
               // value={Country}
@@ -187,7 +187,7 @@ const MainShipping = () => {
               City
             </label>
             <input
-            onChange={ e => setCity(e.target.value)}
+              onChange={e => setCity(e.target.value)}
               type="text"
               className="form"
               id="inputCity"
@@ -201,13 +201,19 @@ const MainShipping = () => {
               Zip
             </label>
             <input
-            onChange={ e =>{
-              setisTouched(true);
-              if(e.target.value.trim().length === 6){
-                setisTouched(false);
-              setZip(e.target.value)}
-        }
-        }
+              onChange={e => {
+                setisTouched(true);
+                if (e.target.value.trim().length === 6) {
+                  setisTouched(false);
+                  setZip(e.target.value)
+                }
+                // else if (e.target.value.trim().length < 6||e.target.value.trim().length >=6) {
+                  else{
+                  setisTouched(true);
+                  setZip("")
+                }
+              }
+              }
               type="text"
               className="form"
               id="inputZip"
@@ -221,26 +227,35 @@ const MainShipping = () => {
               Phone Number
             </label>
             <input
-            onChange={ e => {
-              setphoneTouched(true);
-              if(e.target.value.trim().length > 9){
-                setphoneTouched(false);
-                setPhoneNumber(e.target.value)}
+              onChange={e => {
+                setphoneTouched(true);
+                if (e.target.value.trim().length === 10) {
+                  setphoneTouched(false);
+                  setPhoneNumber(e.target.value)
+                }
+
+                // else if (e.target.value.trim().length <= 9|| e.target.value.trim().length >= 10) {
+                  else{
+                  setphoneTouched(true);
+                  setPhoneNumber("")
+                }
+
               }}
+
               type="text"
               className="form"
               id="inputCity"
             />
-          {phoneTouched && <p>10 digit required</p>}
+            {phoneTouched && <p>10 digit required</p>}
           </div>
           <p />
           <hr className="col-lg-6 col-sm-3" />
           <ShippingBtn />
           <hr className="mt-2 col-lg-6 col-sm-3" />
           <div className="btns">
-          <SubmitButton />
+            <SubmitButton />
 
-            <NavLink to="/">
+            <NavLink to="/cart">
               <button type="button" className="btn-b btn btn-light">
                 Cancel
               </button>

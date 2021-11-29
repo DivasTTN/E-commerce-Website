@@ -93,6 +93,10 @@ const Payment = () => {
                                 setcardTouched(false);
                                 setcardNo(e.target.value)
                             }
+                            else{
+                              setcardTouched(true);
+                              setcardNo("");
+                            }
                         }}          
                         type="text"
 
@@ -128,6 +132,10 @@ const Payment = () => {
                             if(e.target.value.trim().length === 3){
                                 setcvvTouched(false);
                                 setcvv(e.target.value)
+                            }
+                            else{
+                              setcvvTouched(true);
+                              setcvv("");
                             }
                         }}  
                       />
@@ -189,7 +197,7 @@ const Payment = () => {
                   <div class="d-flex p-2 ">
                     <PaymentButton />
                     <div class="pay-cancel ps-2">
-                      <NavLink to="/">
+                      <NavLink to="/ship">
                         <button style={{ width: "150px", border: "none" }}>
                           Cancel
                         </button>
